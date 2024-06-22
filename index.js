@@ -10,6 +10,12 @@ app.get("/", async (req, res) => {
     //   "create table person(id serial primary key,name varchar(20) not null,age int)"
     // );
 
+    // insert records
+    let username = "suraj";
+    let age = 21;
+    await db.pool.query(
+      `insert into person(name,age) values('${username}',${age})`
+    );
 
     res.status(200).json({ success: 'connection successfully'});
   } catch (error) {
