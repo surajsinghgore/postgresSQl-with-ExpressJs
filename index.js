@@ -28,7 +28,9 @@ app.get("/", async (req, res) => {
     //     );
     //    res.status(200).json({ message: 'record updated successfully' });
 
-
+    // delete
+    await db.pool.query(`delete from person where name='suraj'`);
+    res.status(200).json({ message: "record deleted successfully" });
   } catch (error) {
     console.log(error);
   }
