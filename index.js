@@ -17,10 +17,18 @@ app.get("/", async (req, res) => {
     // );
 
     // getting records
+    // let data = await db.pool.query("select*from person");
+    // res.status(200).json({ data: data.rows });
 
-    let data = await db.pool.query("select*from person");
+    // update records
+    //        let oldName = "suraj singh";
+    //        let newName = "ravi";
+    //     await db.pool.query(
+    //       `update person set name='${newName}' where name like '${oldName}'`
+    //     );
+    //    res.status(200).json({ message: 'record updated successfully' });
 
-    res.status(200).json({ data: data.rows });
+
   } catch (error) {
     console.log(error);
   }
